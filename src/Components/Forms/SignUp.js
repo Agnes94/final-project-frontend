@@ -1,46 +1,58 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import { signUp } from 'Services/auth'
 
-const URL = 'http://localhost:8000/users'
+/* const URL = 'http://localhost:8000/users' */
 
 export const SignUp = () => {
 
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
   const [email, setEmail] = useState("")
-  const [errorMessage, setErrorMessage] = useState("")
-  const [message, setMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState(false)
+  const history = useHistory();
 
-  const handleSubmit = event => {
+  const handleSignUp = async event => {
     event.preventDefault()
-
-    fetch(URL, {
-      method: "POST",
-      body: JSON.stringify({ name, email, password }),
-      headers: { "Content-Type": "application/json" }
-    })
-      .then(res => {
-        if (!res.ok) {
-          throw new Error('Could not create user')
-        }
-        return res.json()
+    const response = await signUp(name, email, password);
+    if (response.success && name && email && password) {
+      history.push("/login");
+      console.log("success");
+      return;
+    }
+    setErrorMessage(true);
+    console.log("error");
+  };
+  /* 
+      fetch(URL, {
+        method: "POST",
+        body: JSON.stringify({ name, email, password }),
+        headers: { "Content-Type": "application/json" }
       })
-      .then((json) => {
-        console.log(json)
-        setMessage(json.message)
-        setName("")
-        setEmail("")
-        setPassword("")
-      })
-
-      .catch(err => {
-        console.log("error:", err)
-        setErrorMessage(err.message)
-      })
-
-  }
+        .then(res => {
+          if (!res.ok) {
+            throw new Error('Could not create user')
+          }
+          return res.json()
+        })
+        .then((json) => {
+          console.log(json)
+          setMessage(json.message)
+          setName("")
+          setEmail("")
+          setPassword("")
+        })
+  
+        .catch(err => {
+          console.log("error:", err)
+          setErrorMessage(err.message)
+        })
+  
+    } */
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form>
+        <button onClick={() => history.push("/login")}>Log In</button>
         <h3>Create new user</h3>
         <div className="login-form">
           <label>
@@ -54,19 +66,12 @@ export const SignUp = () => {
           </label>
         </div>
         <button
-          className="button"
-          type="submit"
-          disabled={name.length < 4 || password.length < 4 ? true : false}
-          onClick={handleSubmit}>
+          onClick={event => handleSignUp(event)}>
           SIGN UP
       </button>
       </form>
-
-      {errorMessage && <div><p>{errorMessage}</p></div>}
-      {message && <div><p>{message}</p></div>}
-
-
-    </div >
+      {errorMessage && <div>Could not add user. Please try again!</div>}
+    </div>
   )
 }
 
