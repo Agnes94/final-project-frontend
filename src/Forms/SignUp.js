@@ -1,0 +1,60 @@
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
+import { signUp } from 'Services/auth'
+import "Forms/formStyles.css"
+
+/* const URL = 'http://localhost:8000/users' */
+
+export const SignUp = () => {
+
+  const [name, setName] = useState("")
+  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState("")
+  const [errorMessage, setErrorMessage] = useState('')
+  const history = useHistory();
+
+  const handleSignUp = async event => {
+    event.preventDefault()
+    const response = await signUp(name, email, password);
+    if (response.success && name && email && password) {
+      history.push("/login");
+      console.log("success");
+      return;
+    }
+    setErrorMessage(true);
+    console.log("error");
+  };
+
+  return (
+    <div className="form-container">
+      <div className="vector-container"></div>
+      <form className="signup-form">
+        <h3>Create new user</h3>
+        <div className="label-container">
+          <label>
+            <b>Name:</b>
+            <input className="signup" value={name} type="text" placeholder="" required onChange={event => setName(event.target.value)} />
+          </label>
+          <label>
+            <b>Email:</b>
+            <input className="signup" value={email} type="email" placeholder="Email" required onChange={event => setEmail(event.target.value)} />
+          </label>
+          <label>
+            <b>Password:</b>
+            <input className="signup" value={password} type="password" placeholder="Password" required onChange={event => setPassword(event.target.value)} />
+          </label>
+        </div>
+        <button
+          onClick={event => handleSignUp(event)}>
+          Sign up
+      </button>
+        <div>
+          Already have an account? <a href="" onClick={() => history.push("/login")}>Click here.</a>
+        </div>
+      </form>
+      {errorMessage && <div>Could not add user. Please try again!</div>}
+    </div>
+  )
+}
+
+

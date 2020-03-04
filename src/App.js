@@ -1,25 +1,26 @@
 import React from 'react'
-/* import { RegistrationPage } from 'Pages/RegistrationPage' */
-import background2 from './Assets/background2.jpg'
-import { Login } from './Components/Forms/LogIn'
-import { SignUp } from './Components/Forms/SignUp'
+import { StartPage } from 'Pages/StartPage'
+import { Login } from './Forms/LogIn'
+import { SignUp } from './Forms/SignUp'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-
-import { MyPlantsPage } from 'Pages/MyPlantsPage'
+import { MyPlants } from 'Pages/MyPlantsPage'
 
 
 export const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/signup">
-          <SignUp />
-        </Route>
         <Route path="/login">
           <Login />
         </Route>
+        <Route path="/signup">
+          <SignUp />
+        </Route>
+        <Route path="/">
+          <StartPage />
+        </Route>
         <Route path="/plants">
-          < MyPlantsPage />
+          < MyPlants />
         </Route>
       </Switch>
     </BrowserRouter>
@@ -28,11 +29,11 @@ export const App = () => {
 
 
 //Background image idea
-{/* <section style={{
+/* <section style={{
 
   backgroundImage: `url(${background2})`
 }}>
   <h1>Welcome to my plant app!</h1>
   <Login />
   <SignUp />
-</section >  */}
+</section >  */
