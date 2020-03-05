@@ -38,7 +38,7 @@ export const signUp = (name, email, password) => {
 };
 
 export const loginUser = (email, password) => {
-  return fetch("http://localhost:8000/sessions", {
+  return fetch("http://localhost:8000/login", {
     method: "POST",
     headers: {
       Accept: "application/json",
