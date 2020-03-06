@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { loginUser } from 'Services/auth'
-import "Forms/formStyles.css"
+import 'Styling/formStyles.css'
 import leaf from '../Assets/leaf.png'
 
 /* 

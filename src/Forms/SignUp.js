@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { signUp } from 'Services/auth'
 import leaf from 'Assets/leaf.png'
-import "Forms/formStyles.css"
+import 'Styling/formStyles.css'
 
 /* const URL = 'http://localhost:8000/users' */
 

@@ -1,6 +1,7 @@
 import React from 'react'
-import '../Pages/hamburgerMenu.css'
+import 'Styling/hamburgerMenu.css'
 import { Link } from "react-router-dom"
+import { HamburgerMenu } from 'react-hamburger-menu';
 
 export const HamburgerMenu = () => {
   return (

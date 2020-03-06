@@ -1,5 +1,4 @@
 import React from 'react'
-import { LoginUser } from '../Forms/LogIn';
 
 export const LogoutUser = props => {
   //If this is active, the function runs without pressing the button
