@@ -9,7 +9,7 @@ export const NavBar = () => {
     <nav>
 
       <div className="navbar-logo">
-        <img src={leaf} />
+        <img className="img-logo" src={leaf} />
       </div>
 
       <ul>
