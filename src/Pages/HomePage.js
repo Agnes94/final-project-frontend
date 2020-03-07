@@ -1,16 +1,17 @@
 import React from 'react'
 import "Styling/homePage.css"
 import { useHistory } from 'react-router-dom';
-import { Footer } from 'Components/Footer'
+import { NavBar } from '../Components/NavBar'
 /* import { HamburgerMenu } from '../Components/HamburgerMenu' */
 
 
 export const HomePage = () => {
   return (
     <section>
+      <NavBar />
       <div>
-        Hello Welcome to Plant Care!
-    </div>
+
+      </div>
     </section>
   )
 }

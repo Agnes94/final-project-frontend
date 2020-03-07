@@ -10,13 +10,9 @@ export const LogoutUser = props => {
   }
 
   return (
-    <div>
-      <button
-        className="button"
-        type="submit"
-        onClick={onLoggedOut}>
-        Log out
-        </button>
-    </div>
+    <a
+      onClick={onLoggedOut}>
+      Log out
+       </a>
   )
 }

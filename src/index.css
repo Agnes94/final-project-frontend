@@ -9,10 +9,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-background: rgb(42,68,85);
-background: linear-gradient(90deg, rgba(42,68,85,0.9178046218487395) 0%, rgba(13,133,108,0.9598214285714286) 43%, rgba(60,152,108,0.9122023809523809) 82%);
+  background: rgb(42,68,85);
+  background: linear-gradient(90deg, rgba(42,68,85,0.9178046218487395) 0%, rgba(13,133,108,0.9598214285714286) 43%, rgba(60,152,108,0.9122023809523809) 82%);
   color: white;
-  font-family: 'Roboto';
+  font-family: 'Montserrat';
 }
 
 html {
@@ -20,8 +20,7 @@ html {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Montserrat'
 }
 
 section {

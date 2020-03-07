@@ -2,13 +2,13 @@ import React from 'react'
 import { HomePage } from 'Pages/HomePage'
 import { AboutPage } from 'Pages/AboutPage'
 import { MyPlantsPage } from 'Pages/MyPlantsPage'
+import { Articles } from 'Pages/Articles'
 import { Login } from './Forms/LogIn'
 import { SignUp } from './Forms/SignUp'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MyPlants } from 'Pages/MyPlantsPage'
 import { Footer } from './Components/Footer'
-import { Header } from './Components/Header'
-
+/* import { Header } from './Components/Header' */
 
 
 export const App = () => {
@@ -25,7 +25,13 @@ export const App = () => {
           <HomePage />
         </Route>
         <Route path="/plants">
-          < MyPlants />
+          <MyPlants />
+        </Route>
+        <Route path="/articles">
+          <Articles />
+        </Route>
+        <Route path="/about">
+          <AboutPage />
         </Route>
       </Switch>
       <Footer />
