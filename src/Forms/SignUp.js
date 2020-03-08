@@ -4,8 +4,6 @@ import { signUp } from 'Services/auth'
 import leaf from 'Assets/leaf.png'
 import 'Styling/formStyles.css'
 
-/* const URL = 'http://localhost:8000/users' */
-
 export const SignUp = () => {
 
   const [name, setName] = useState("")
@@ -19,11 +17,9 @@ export const SignUp = () => {
     const response = await signUp(name, email, password);
     if (response.success && name && email && password) {
       history.push("/login");
-      /* console.log("success"); */
       return;
     }
     setErrorMessage(true);
-    /*     console.log("error"); */
   };
 
   return (

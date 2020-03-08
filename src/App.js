@@ -8,21 +8,17 @@ import { SignUp } from './Forms/SignUp'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { MyPlants } from 'Pages/MyPlantsPage'
 import { Footer } from './Components/Footer'
-/* import { Header } from './Components/Header' */
 
 
 export const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/login">
-          <Login />
+        <Route path="/home-page">
+          <HomePage />
         </Route>
         <Route path="/signup">
           <SignUp />
-        </Route>
-        <Route path="/">
-          <HomePage />
         </Route>
         <Route path="/plants">
           <MyPlants />
@@ -32,6 +28,9 @@ export const App = () => {
         </Route>
         <Route path="/about">
           <AboutPage />
+        </Route>
+        <Route path="/">
+          <Login />
         </Route>
       </Switch>
       <Footer />

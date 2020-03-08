@@ -7,14 +7,13 @@ import leaf from 'Assets/leaf.png'
 export const NavBar = () => {
   return (
     <nav>
-
       <div className="navbar-logo">
         <img className="img-logo" src={leaf} />
       </div>
 
       <ul>
 
-        <Link className="link" to={'/'} >
+        <Link className="link" to={'/homepage'} >
           <li>Home</li>
         </Link>
 
@@ -35,6 +34,7 @@ export const NavBar = () => {
         </Link>
 
       </ul>
+
     </nav>
   )
 }

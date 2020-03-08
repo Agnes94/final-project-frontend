@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import { loginUser } from 'Services/auth'
-import 'Styling/formStyles.css'
 import leaf from '../Assets/leaf.png'
+import 'Styling/formStyles.css'
 
 /* 
 const URL = 'http://localhost:8000/login' */
@@ -17,15 +17,21 @@ export const Login = () => {
   const handleLoginUser = async event => {
     event.preventDefault();
     const response = await loginUser(email, password);
-    if (response.success) {
-      history.push({
-        pathname: "/homepage", //haven't figured out yet which ath should I use, so put login temporarily
-        username: response.name
-      });
-      return;
-    }
+    history.push("/home-page", {
+      username: response.name
+    });
+
+
+
+    /*  history.push({
+       pathname: "/homepage", //haven't figured out yet which ath should I use, so put login temporarily
+       username: response.name
+     });
+     return; */
+
     setErrorMessage(true);
   };
+
 
   return (
     <section className="login-wrapper">
@@ -45,8 +51,8 @@ export const Login = () => {
             </label>
             <div>{errorMessage}</div>
           </div>
+          {errorMessage && <div className="error-message">User not found</div>}
           <button className="login-btn" onClick={event => handleLoginUser(event)}>Login</button>
-          {errorMessage && <div>User not found, access forbidden</div>}
           <div>Don't have an account?  <a onClick={() => history.push("/signup")}>
             Click here.
       </a></div>
