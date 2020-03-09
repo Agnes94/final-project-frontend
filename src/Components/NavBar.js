@@ -13,7 +13,7 @@ export const NavBar = () => {
 
       <ul>
 
-        <Link className="link" to={'/homepage'} >
+        <Link className="link" to={'/home-page'} >
           <li>Home</li>
         </Link>
 

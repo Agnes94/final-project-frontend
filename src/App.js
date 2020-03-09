@@ -1,12 +1,11 @@
 import React from 'react'
 import { HomePage } from 'Pages/HomePage'
 import { AboutPage } from 'Pages/AboutPage'
-import { MyPlantsPage } from 'Pages/MyPlantsPage'
 import { Articles } from 'Pages/Articles'
 import { Login } from './Forms/LogIn'
 import { SignUp } from './Forms/SignUp'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { MyPlants } from 'Pages/MyPlantsPage'
+import { MyPlants } from 'Pages/PlantsPage'
 import { Footer } from './Components/Footer'
 
 

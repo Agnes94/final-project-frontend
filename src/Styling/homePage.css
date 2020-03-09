@@ -1,0 +1,39 @@
+.home-page {
+  display: flex;
+flex-direction: row;
+}
+
+.home-vector {
+  width: 650px;
+  height: 650px;
+  padding-top: 70px;
+  padding-right: 30px;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 50px;
+}
+
+.home-btn {
+  width: 250px;
+  height: 70px;
+  font-size: 30px;
+  background-color: #DF524E;
+}
+
+.home-text h1 {
+padding-top: 30px;
+margin-bottom: 50px;
+font-size: 60px;
+}
+
+.home-text h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
