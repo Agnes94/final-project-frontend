@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/core": "^0.6.1",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "babel-eslint": "^10.0.3",
+    "emotion-theming": "^10.0.27",
     "eslint": "^6.7.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.18.2",

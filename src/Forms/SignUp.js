@@ -9,7 +9,7 @@ export const SignUp = () => {
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
   const [email, setEmail] = useState("")
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState("''")
   const history = useHistory();
 
   const handleSignUp = async event => {

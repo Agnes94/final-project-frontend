@@ -10,6 +10,8 @@ export const checkAuth = accessToken => {
   });
 };
 
+//*** Sign Up ***//
+
 export const signUp = (name, email, password) => {
   return fetch("http://localhost:8000/users", {
     method: "POST",
@@ -36,6 +38,8 @@ export const signUp = (name, email, password) => {
       };
     });
 };
+
+//*** Login ***//
 
 export const loginUser = (email, password) => {
   return fetch("http://localhost:8000/login", {
@@ -68,5 +72,38 @@ export const loginUser = (email, password) => {
     })
     .catch(err => {
       console.log(err);
+    });
+};
+
+//*** Plant form ***//
+
+
+export const plantForm = (name, location, acquiredAt, type, notes, waterAt) => {
+  return fetch("http://localhost:8000/plants", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name,
+      location,
+      acquiredAt,
+      type,
+      notes,
+      waterAt
+    })
+  })
+    .then(res => res.json())
+    .then(res => {
+      if (!res.accessToken) {
+        return {
+          success: false,
+          message: res.message
+        };
+      }
+      return {
+        success: true
+      };
     });
 };

@@ -4,8 +4,6 @@ import { loginUser } from 'Services/auth'
 import leaf from '../Assets/leaf.png'
 import 'Styling/formStyles.css'
 
-/* 
-const URL = 'http://localhost:8000/login' */
 
 export const Login = () => {
 
