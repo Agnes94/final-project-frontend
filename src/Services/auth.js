@@ -77,7 +77,24 @@ export const loginUser = (email, password) => {
 
 //*** Plant form ***//
 
+export const plantForm = (name, location, acquiredAt, type, notes, waterAt) => {
+  return fetch("http://127.0.0.1:8000/plants", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    body: `name=${name}&location=${location}&type=${type}&notes=${notes}&acquiredAt=${acquiredAt}&waterAt=${waterAt}`
+  })
+    .then(res => res.json())
+    .then(res => {
+      return {
+        success: true
+      };
+    });
+};
 
+/*
 export const plantForm = (name, location, acquiredAt, type, notes, waterAt) => {
   return fetch("http://localhost:8000/plants", {
     method: "POST",
@@ -85,14 +102,7 @@ export const plantForm = (name, location, acquiredAt, type, notes, waterAt) => {
       Accept: "application/json",
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      name,
-      location,
-      acquiredAt,
-      type,
-      notes,
-      waterAt
-    })
+    body: `name = ${name} & location=${location} & type=${type} & notes=${notes}`
   })
     .then(res => res.json())
     .then(res => {
@@ -106,4 +116,4 @@ export const plantForm = (name, location, acquiredAt, type, notes, waterAt) => {
         success: true
       };
     });
-};
+}; */
