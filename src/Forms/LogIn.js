@@ -19,14 +19,6 @@ export const Login = () => {
       username: response.name
     });
 
-
-
-    /*  history.push({
-       pathname: "/homepage", //haven't figured out yet which ath should I use, so put login temporarily
-       username: response.name
-     });
-     return; */
-
     setErrorMessage(true);
   };
 
