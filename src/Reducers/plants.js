@@ -18,17 +18,14 @@ export const plants = createSlice({
     addPlant: (state, action) => {
       state.plants.push(action.payload)
     },
-    updatePlant: (state, action) => {
-      const updatedPlant = state.plants.find(plant => plant._id === action.payload)
-      if (updatedPlant) { }
-    },
     deletePlant: (state, action) => {
       state.plants = state.plants.filter(plant => plant._id !== action.payload)
     }
   }
 })
 
-// THUNK FOR ADDING PLANTS
+//THUNK FOR ADDING PLANTS
+
 export const addPlants = (plant) => {
   return dispatch => {
     fetch("http://127.0.0.1:8000/plants", {
@@ -66,32 +63,29 @@ export const PlantFetch = () => {
   }
 }
 
-/* // THUNK MIDDLEWARE FOR UPDATE SPECIFIC PLANT
-export const updatePlants = (formValues, plantId) => {
+//THUNK MIDDLEWARE FOR UPDATE SPECIFIC PLANT
+export const updatePlants = (formData, plant) => {
   return dispatch => {
-    dispatch(actions.setLoading(true))
-    fetch(``, {
+    fetch(`http://127.0.0.1:8000/plants/${plant._id}`, {
       method: 'PUT',
       body: JSON.stringify(formData),
       headers: { 'Content-Type': 'application/json' }
     })
       .then(() => {
-        // dispatch(plants.actions.updatePlant(plantId))
-        dispatch(actions.setLoading(false))
+        dispatch(plants.actions.updatePlant(plant))
+
       })
   }
 }
 
-// THUNK MIDDLEWARE FOR DELETING SPECIFIC PLANT
-export const deletePlants = (guest) => {
+//THUNK MIDDLEWARE FOR DELETING SPECIFIC PLANT
+export const deletePlants = (plant) => {
   return dispatch => {
-    dispatch(actions.setLoading(true))
-    fetch(``, {
-      method: 'DELETE'
+    fetch(`http://127.0.0.1:8000/plants/${plant._id}`, {
+      method: 'DELETE',
     })
       .then(() => {
         dispatch(plants.actions.deletePlant(plant._id))
-        dispatch(actions.setLoading(false))
       })
   }
-} */
+}

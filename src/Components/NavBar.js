@@ -2,7 +2,6 @@ import React from 'react'
 import 'Styling/navBar.css'
 import { Link } from 'react-router-dom'
 import leaf from 'Assets/leaf.png'
-/* import { LogoutUser } from './LogOut'; */
 
 export const NavBar = () => {
   return (
@@ -25,7 +24,7 @@ export const NavBar = () => {
           <li>Add plant</li>
         </Link>
 
-        <Link className="link" to={'/articles'} >
+        <Link className="link" to={'/plant-list'} >
           <li>My plants</li>
         </Link>
 
