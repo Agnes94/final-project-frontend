@@ -3,7 +3,7 @@ import { NavBar } from 'Components/NavBar';
 import { PlantSummary } from 'Components/PlantList';
 
 
-export const Articles = () => {
+export const MyPlantsPage = () => {
   return (
     <section>
       <NavBar />

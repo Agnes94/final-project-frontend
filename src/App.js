@@ -5,10 +5,10 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { plants } from 'Reducers/plants'
 import { HomePage } from 'Pages/HomePage'
 import { AboutPage } from 'Pages/AboutPage'
-import { Articles } from 'Pages/Articles'
+import { MyPlantsPage } from 'Pages/MyPlantsPage'
 import { Login } from './Forms/LogIn'
 import { SignUp } from './Forms/SignUp'
-import { MyPlants } from 'Pages/PlantsPage'
+import { PlantFormPage } from 'Pages/PlantFormPage'
 import { Footer } from './Components/Footer'
 
 const reducer = combineReducers({
@@ -29,10 +29,10 @@ export const App = () => {
             <SignUp />
           </Route>
           <Route path="/plants">
-            <MyPlants />
+            <MyPlantsPage />
           </Route>
           <Route path="/articles">
-            <Articles />
+            <PlantFormPage />
           </Route>
           <Route path="/about">
             <AboutPage />

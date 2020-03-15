@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { plants } from 'Reducers/plants'
 import { useDispatch, useSelector } from 'react-redux'
 import { PlantCard } from 'Components/PlantCard'
 import { PlantFetch } from 'Reducers/plants'
@@ -11,7 +10,7 @@ export const PlantSummary = () => {
     dispatch(PlantFetch())
   })
 
-  let Plants = useSelector(state => state.plants.plants)
+  const Plants = useSelector(state => state.plants.plants)
 
   return (
 

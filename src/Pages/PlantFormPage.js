@@ -4,7 +4,7 @@ import { PlantForm } from '../Forms/PlantForm'
 import 'Styling/plantsPage.css'
 
 
-export const MyPlants = () => {
+export const PlantFormPage = () => {
 
   return (
     <section className="plants-page">
