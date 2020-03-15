@@ -27,7 +27,12 @@ export const PlantForm = () => {
       waterAt: ''
     })
   }
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(plants.actions.addPlant(formData)) //sending form data to the reducer
+    clearForm()
+    /*    dispatch(actions.addPlant(true)) */
+  }
 
   return (
     <form className="form-style" onSubmit={handleSubmit} >
