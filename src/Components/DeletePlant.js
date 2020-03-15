@@ -22,13 +22,11 @@ export const DeletePlant = () => {
   return (
     <>
       {open && (
-        <section>
-          <h1>Are you sure you want to delete this plant ?</h1>
-          <div>
-            <button type='button' title='Yes' onClick={handleYes} />
-            <button type='button' title='No' onClick={handleNo} />
-          </div>
-        </section>
+        <div>
+          <p>Are you sure you want to delete this plant ?</p>
+          <button type='button' title='Yes' onClick={handleYes}>Yes</button>
+          <button type='button' title='No' onClick={handleNo}>No</button>
+        </div>
       )}
     </>
   )

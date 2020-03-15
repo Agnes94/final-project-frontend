@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { plants } from 'Reducers/plants'
 import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom';
 
 
 export const PlantForm = () => {
@@ -36,6 +37,20 @@ export const PlantForm = () => {
 
   return (
     <form className="form-style" onSubmit={handleSubmit} >
+      {/* 
+      <label>
+        <h2 className="plant-image">Upload image</h2>
+        <input
+          action='plants/images'
+          method="post"
+          encType="multipart/form-data"
+          value={formData.image}
+          type="file"
+          onChange={event => setFormData({ ...formData, image: event.target.value })}
+        />
+      </label> */}
+
+
       <label>
         <h2 className="plant-name">What is the name of your plant?</h2>
         <input
@@ -86,16 +101,13 @@ export const PlantForm = () => {
           required
           onChange={event => setFormData({ ...formData, notes: event.target.value })} />
       </label>
-      {/*     <div>{errorMessage}</div> */}
-
-      {/*    Here comes the image upload if I figure it out */}
 
       <label>
         <h2 className="plant-date">When do you water this plant?</h2>
         <input
           value={formData.waterAt}
           type="date"
-          onChange={event => setFormData({ ...formData, acquiredAt: event.target.value })}
+          onChange={event => setFormData({ ...formData, waterAt: event.target.value })}
         />
       </label>
 
