@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { plants } from 'Reducers/plants'
 import { useDispatch } from 'react-redux'
+import {addPlants} from "../Reducers/plants";
 
 
 export const PlantForm = () => {
@@ -27,12 +28,6 @@ export const PlantForm = () => {
     })
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    dispatch(plants.actions.addPlant(formData)) //sending form data to the reducer
-    clearForm()
-    /*    dispatch(actions.addPlant(true)) */
-  }
 
   return (
     <form className="form-style" onSubmit={handleSubmit} >
@@ -95,7 +90,7 @@ export const PlantForm = () => {
         <input
           value={formData.waterAt}
           type="date"
-          onChange={event => setFormData({ ...formData, acquiredAt: event.target.value })}
+          onChange={event => setFormData({ ...formData, waterAt: event.target.value })}
         />
       </label>
 

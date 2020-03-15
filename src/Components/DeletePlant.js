@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux'
 
 
 export const DeletePlant = () => {
-
   const dispatch = useDispatch()
   const open = useSelector(state => state.ui.ConfirmDelete)
   const plant = useSelector(state => state.plants.plant)

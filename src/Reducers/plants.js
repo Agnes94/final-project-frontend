@@ -30,7 +30,7 @@ export const addPlants = (plant) => {
   return dispatch => {
     fetch("http://127.0.0.1:8000/plants", {
       method: 'POST',
-      body: JSON.stringify(plant),
+      body: `name=${plant.name}&location=${plant.location}&type=${plant.type}&notes=${plant.notes}&acquiredAt=${plant.acquiredAt}&waterAt=${plant.waterAt}`,
       headers: {
         Accept: "application/json",
         'Content-Type': "application/x-www-form-urlencoded"

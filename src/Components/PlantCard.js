@@ -1,5 +1,6 @@
 import React from 'react';
 import { leaf } from 'Assets/leaf.png';
+import {DeletePlant} from "./DeletePlant";
 
 export const PlantCard = ({ name, location, type, acquiredAt, waterAt, notes, onClickEdit, onClickDelete }) => {
 
@@ -16,6 +17,7 @@ export const PlantCard = ({ name, location, type, acquiredAt, waterAt, notes, on
       </button>
       <button className="delete-button" onClick={onClickDelete} > Delete
       </button >
+        <DeletePlant/>
     </div>
   )
 }
