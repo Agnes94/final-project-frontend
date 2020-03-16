@@ -5,13 +5,14 @@ import { PlantFetch } from 'Reducers/plants'
 import { plants } from 'Reducers/plants'
 import 'Styling/plantList.css'
 import moment from 'moment'
+import {deletePlants} from "../Reducers/plants";
 
 export const PlantSummary = () => {
     const Plants = useSelector(state => state.plants.plants)
 
     const dispatch = useDispatch();
-    const handleDeletePlant = () => {
-        dispatch(deletePlants(plants._id));
+    const handleDeletePlant = (plantId) => {
+        dispatch(deletePlants(plantId));
     };
 
     useEffect(() => {
