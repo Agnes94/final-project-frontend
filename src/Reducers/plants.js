@@ -9,12 +9,12 @@ export const plants = createSlice({
   },
 
   reducers: {
-    setPlant: (state, action) => {
-      state.plant = action.payload
-    },
-    setPlants: (state, action) => {
-      state.plants = action.payload
-    },
+    /*     setPlant: (state, action) => {
+          state.plant = action.payload
+        },
+        setPlants: (state, action) => {
+          state.plants = action.payload
+        }, */
     addPlant: (state, action) => {
       state.plants.push(action.payload)
     },

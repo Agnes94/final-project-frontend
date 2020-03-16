@@ -31,6 +31,7 @@ export const PlantForm = () => {
       waterAt: ''
     })
   }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addPlants(formData)) //sending form data to the reducer
@@ -39,12 +40,13 @@ export const PlantForm = () => {
     /*    dispatch(actions.addPlant(true)) */
   }
 
+
   return (
     <>
       <form className="form-style" onSubmit={handleSubmit} >
         <header>
           <div className="form-title">
-            <h1>Welcome, Plant lover!</h1>
+            <h1>Welcome, Plant Lover!</h1>
           </div>
         </header>
         <div className="values">

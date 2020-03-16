@@ -1,3 +1,5 @@
+//*** Authorization ***/
+
 export const checkAuth = accessToken => {
   fetch("http://localhost:8000/secrets", {
     method: "GET",

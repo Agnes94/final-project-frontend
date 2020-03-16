@@ -1,7 +1,9 @@
 import React from 'react'
 import 'Styling/navBar.css'
 import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import leaf from 'Assets/leaf.png'
+
 
 export const NavBar = () => {
   return (
