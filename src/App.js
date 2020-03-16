@@ -3,7 +3,6 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { plants } from 'Reducers/plants'
-import { ui } from 'Reducers/ui'
 import { HomePage } from 'Pages/HomePage'
 import { AboutPage } from 'Pages/AboutPage'
 import { MyPlantsPage } from 'Pages/MyPlantsPage'
@@ -14,7 +13,6 @@ import { Footer } from './Components/Footer'
 
 const reducer = combineReducers({
   plants: plants.reducer,
-  ui: ui.reducer
 })
 
 export const store = configureStore({ reducer })

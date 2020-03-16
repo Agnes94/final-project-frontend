@@ -9,7 +9,6 @@ export const PlantFormPage = () => {
   return (
     <section className="plants-page">
       <NavBar />
-      <h1>Welcome, Plant lover!</h1>
       <div className="plants-container">
         <PlantForm />
       </div>

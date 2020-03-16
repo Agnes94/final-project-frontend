@@ -1,7 +1,14 @@
-
 .plant-list {
 display: flex;
 flex-wrap: wrap;
 justify-content: space-evenly;
 border: 2px white;
+margin-top: 50px;
+}
+
+.plant-list-title {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 60px;
 }

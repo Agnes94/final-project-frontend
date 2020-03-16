@@ -3,4 +3,17 @@
   border: 2px solid white;
   border-radius: 20px;
   margin: 20px;
+  font-size: 15px;
+  padding: 15px;
+  padding-top: 30px;
+  align-items: center;
+  width: auto;
+}
+
+.plant-card h2 {
+  color: white;
+}
+
+.plant-card span {
+  color: #cfcfc4;
 }
