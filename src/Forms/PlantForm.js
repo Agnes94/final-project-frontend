@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { plants } from 'Reducers/plants'
 import { useDispatch } from 'react-redux'
-import {addPlants} from "../Reducers/plants";
+import { addPlants } from "../Reducers/plants";
 
 
 export const PlantForm = () => {
@@ -29,7 +29,7 @@ export const PlantForm = () => {
   }
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(plants.actions.addPlant(formData)) //sending form data to the reducer
+    dispatch(addPlants(formData)) //sending form data to the reducer
     clearForm()
     /*    dispatch(actions.addPlant(true)) */
   }
