@@ -1,7 +1,7 @@
 import React from 'react'
 import 'Styling/navBar.css'
 import { Link } from 'react-router-dom'
-import { useHistory } from 'react-router-dom'
+/* import { useHistory } from 'react-router-dom' */
 import leaf from 'Assets/leaf.png'
 
 
@@ -13,7 +13,6 @@ export const NavBar = () => {
       </div>
 
       <ul>
-
         <Link className="link" to={'/home-page'} >
           <li>Home</li>
         </Link>

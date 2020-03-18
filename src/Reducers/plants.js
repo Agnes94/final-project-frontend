@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 
 export const plants = createSlice({
@@ -20,6 +20,14 @@ export const plants = createSlice({
         },
         deletePlant: (state, action) => {
             state.plants = state.plants.filter(plant => plant._id !== action.payload)
+        },
+        editPlant: (state, action) => {
+            state.plants = state.plants.map((plant) => {
+                if (plant._id === action.payload._id) {
+                    return action.payload
+                }
+                return plant
+            })
         }
     }
 })
@@ -38,13 +46,12 @@ export const addPlants = (plant) => {
         })
             .then(res => res.json())
             .then((json) => {
-                // Dispatching the form values to the action to add guest
                 dispatch(plants.actions.addPlant(json))
             })
     }
 }
 
-//THUNK FOR PLANTLIST
+//THUNK FOR PLANT LIST
 
 export const PlantFetch = () => {
     return dispatch => {
@@ -63,22 +70,22 @@ export const PlantFetch = () => {
     }
 }
 
-//THUNK MIDDLEWARE FOR UPDATE SPECIFIC PLANT
-export const updatePlants = (formData, plant) => {
+//THUNK FOR EDITING SPECIFIC PLANT
+export const editPlants = (formData, plantId) => {
     return dispatch => {
-        fetch(`http://127.0.0.1:8000/plants/${plant._id}`, {
+        fetch(`http://127.0.0.1:8000/plants/${plantId}`, {
             method: 'PUT',
             body: JSON.stringify(formData),
-            headers: {'Content-Type': 'application/json'}
+            headers: { 'Content-Type': 'application/json' }
         })
-            .then(() => {
-                dispatch(plants.actions.updatePlant(plant))
-
+            .then((res) => res.json())
+            .then((plant) => {
+                dispatch(plants.actions.editPlant(plant))
             })
     }
 }
 
-//THUNK MIDDLEWARE FOR DELETING SPECIFIC PLANT
+//THUNK FOR DELETING SPECIFIC PLANT
 export const deletePlants = (plantId) => {
     return dispatch => {
         fetch(`http://127.0.0.1:8000/plants/${plantId}`, {

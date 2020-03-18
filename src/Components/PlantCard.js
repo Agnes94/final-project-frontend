@@ -2,7 +2,7 @@ import React from 'react';
 import leaf from 'Assets/leaf.png';
 import 'Styling/plantCard.css'
 
-export const PlantCard = ({ name, location, type, acquiredAt, waterAt, notes, onClickDelete }) => {
+export const PlantCard = ({ name, location, type, acquiredAt, waterAt, notes, onClickDelete, onClickEdit }) => {
 
   return (
     <div className="plant-card">
@@ -14,6 +14,7 @@ export const PlantCard = ({ name, location, type, acquiredAt, waterAt, notes, on
       <h2>Next watering: <span>{waterAt}</span></h2>
       <h2>Notes: <span>{notes}</span></h2>
       <button className="delete-button" onClick={onClickDelete} > Delete </button >
+      <button className="delete-button" onClick={onClickEdit} > Edit </button >
     </div>
   )
 }

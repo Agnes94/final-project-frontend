@@ -5,8 +5,6 @@ import { addPlants } from "../Reducers/plants";
 import { useHistory } from 'react-router-dom';
 import 'Styling/plantForm.css'
 
-
-
 export const PlantForm = () => {
   const dispatch = useDispatch()
   const history = useHistory();
