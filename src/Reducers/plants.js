@@ -35,6 +35,30 @@ export const plants = createSlice({
 //THUNK FOR ADDING PLANTS
 
 export const addPlants = (plant) => {
+    let data = new FormData()
+    data.append("name", plant.name)
+    data.append("location", plant.location)
+    data.append("type", plant.type)
+    data.append("notes", plant.notes)
+    data.append("acquiredAt", plant.acquiredAt)
+    data.append("waterAt", plant.waterAt)
+    data.append("image", plant.image)
+    return dispatch => {
+        fetch("http://127.0.0.1:8000/plants", {
+            method: 'POST',
+            body: data,
+            headers: {
+                Accept: "application/json",
+            }
+        })
+            .then(res => res.json())
+            .then((json) => {
+                dispatch(plants.actions.addPlant(json))
+            })
+    }
+}
+
+/* export const addPlants = (plant) => {
     return dispatch => {
         fetch("http://127.0.0.1:8000/plants", {
             method: 'POST',
@@ -50,7 +74,7 @@ export const addPlants = (plant) => {
             })
     }
 }
-
+ */
 //THUNK FOR PLANT LIST
 
 export const PlantFetch = () => {

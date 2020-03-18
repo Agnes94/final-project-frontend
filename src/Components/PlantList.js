@@ -29,6 +29,7 @@ export const PlantSummary = () => {
                 {Plants.map(plants => (
                     <PlantCard
                         key={plants._id}
+                        /* image={plants.image} */
                         name={plants.name}
                         location={plants.location}
                         type={plants.type}

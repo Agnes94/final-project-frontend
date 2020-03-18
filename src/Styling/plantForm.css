@@ -81,6 +81,16 @@ input[type=date] {
   margin-bottom: 20px;
 }
 
+input[type=file] {
+  cursor: pointer;
+  margin-left: 20px;
+  color: #FFFF;
+  font-size: 15px;
+  margin-bottom: 20px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
 input[type=text]:focus {
   background: none;
   outline: none;

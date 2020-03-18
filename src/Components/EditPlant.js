@@ -8,15 +8,14 @@ export const editPlantCard = () => {
 
   const [formData, setFormData] = useState({
 
-    name=plants.name || '',
-    location=plants.location || '',
-    type=plants.type || '',
-    acquiredAt=plants.acquiredAt || '',
-    waterAt=plants.waterAt || '',
-    notes=plants.notes || ''
+    name = plant.name || '',
+    location = plant.location || '',
+    type=plant.type || '',
+    acquiredAt=plant.acquiredAt || '',
+    waterAt=plant.waterAt || '',
+    notes=plant.notes || ''
 
   })
-
 
   useEffect(() => {
     setFormData(plant)
@@ -30,8 +29,6 @@ export const editPlantCard = () => {
   return (
     <>
       {open && (
-
-
         <form className="form-style" onSubmit={handleSubmit} >
 
           <div className="values">

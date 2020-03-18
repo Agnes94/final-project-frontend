@@ -98,9 +98,18 @@ export const PlantForm = () => {
               required
               onChange={event => setFormData({ ...formData, notes: event.target.value })} />
           </label>
-          {/*     <div>{errorMessage}</div> */}
 
-          {/*    Here comes the image upload if I figure it out */}
+          <label>
+            <h2 className="plant-image">Upload an image of your plant:</h2>
+            <input
+              /* value={formData.image} */
+              type="file"
+              onChange={event => setFormData({
+                ...formData,
+                image: event.target.files[0]
+              })}
+            />
+          </label>
 
           <label>
             <h2 className="plant-date">When do you water this plant?</h2>
