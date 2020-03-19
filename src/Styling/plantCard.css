@@ -17,3 +17,15 @@
 .plant-card span {
   color: #cfcfc4;
 }
+
+.delete-icon {
+  width: 30px;
+  height: 30px;
+  float: right;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.delete-icon:hover {
+  opacity: 0.8;
+}

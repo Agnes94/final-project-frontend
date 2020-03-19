@@ -1,3 +1,51 @@
 .about-page {
   background-color:white;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.about-content {
+  color: #375B65;
+  width: 500px;
+  height: 500px;
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.about-content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.about-content h2 {
+  font-size: 25px;
+  color:  rgb(76, 122, 135);
+}
+
+.about-list li {
+  margin: 10px;
+  color:rgb(76, 122, 135);
+  font-size: 20px;
+}
+
+.about-list {
+  flex-direction: column;
+  margin: 0;
+  margin-right: 50px;
+  color: #375B65;
+}
+
+span {
+  font-weight: bold;
+}
+
+.about-image {
+  width: 700px;
+  height: 700px;
+  margin-left: 50px;
 }

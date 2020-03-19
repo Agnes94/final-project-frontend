@@ -1,6 +1,7 @@
 import React from 'react'
 import 'Styling/navBar.css'
 import { Link } from 'react-router-dom'
+import { HamburgerMenu } from 'Components/HamburgerMenu'
 /* import { useHistory } from 'react-router-dom' */
 import leaf from 'Assets/leaf.png'
 
@@ -33,6 +34,7 @@ export const NavBar = () => {
           <li className="logout">Log out</li>
         </Link>
 
+        <HamburgerMenu />
       </ul>
 
     </nav>

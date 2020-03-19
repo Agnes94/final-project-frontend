@@ -24,12 +24,12 @@ export const PlantSummary = () => {
 
     return (
         <>
-            <h1 className="plant-list-title">Your plants:</h1>
+            <h1 className="plant-list-title">Your plants</h1>
             <div className='plant-list'>
                 {Plants.map(plants => (
                     <PlantCard
                         key={plants._id}
-                        /* image={plants.image} */
+                        image={plants.image}
                         name={plants.name}
                         location={plants.location}
                         type={plants.type}
