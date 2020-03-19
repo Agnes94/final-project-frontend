@@ -1,9 +1,9 @@
 import React from 'react'
 import "Styling/homePage.css"
 import homevector2 from 'Assets/homevector2.png'
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
 import { NavBar } from '../Components/NavBar'
-/* import { HamburgerMenu } from '../Components/HamburgerMenu' */
+import { HamburgerMenu } from '../Components/HamburgerMenu'
 
 
 export const HomePage = () => {
@@ -12,7 +12,8 @@ export const HomePage = () => {
 
   return (
     <section>
-      <NavBar />
+      <div className="hamburger-menu"> <HamburgerMenu /> </div>
+      <div className="navbar"> <NavBar /> </div>
       <div className="home-page">
         <div className="home-text">
           <h1>No more killing your houseplants!</h1>

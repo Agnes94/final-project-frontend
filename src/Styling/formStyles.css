@@ -4,17 +4,18 @@ flex-direction: row;
 align-items: center;
 justify-content: center;
 margin-top: 50px;
+margin-bottom: 100px;
 }
 
 .vector-container {
-width: 50% ;
-background-image: url('../Assets/reg-vector.jpg');
-background-position: 50% 50%;
-background-size: cover;
-object-fit: cover;
-height: 600px;
-border-bottom-left-radius: 4px;
-border-top-left-radius: 4px;
+  width: 50% ;
+  background-image: url('../Assets/reg-vector.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  object-fit: cover;
+  height: 600px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
 }
 
 h3 {
@@ -23,16 +24,16 @@ h3 {
 }
 
 h1{
-text-align: center;
-margin-top: 100px;
-font-size: 70px;
-font-weight: lighter;
-font-family: 'Montserrat';
+  text-align: center;
+  margin-top: 100px;
+  font-size: 70px;
+  font-weight: lighter;
+  font-family: 'Montserrat';
 }
 
 .login-form h3{
-text-align: center;
-padding-bottom: 20px;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .error-message {
@@ -87,7 +88,7 @@ padding-left: 40px;
   border-bottom: 1px solid grey;
 }
 
-input[type=text], input[type=password], input[type=email] {
+.signup-text[type=text], input[type=password], input[type=email] {
   width: 80%;
   padding: 15px;
   margin: 10px 0 22px 0;
@@ -125,3 +126,73 @@ button:hover {
 height: 80px;
 width: 80px;
 }
+
+@media (min-width : 320px) and (max-width: 767px) {
+
+.signup-form-container, .login-form-container {
+  margin-top: 0px;
+  }
+
+.vector-container {
+  display: none;
+}
+
+h3 {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+}
+
+.login-form h3 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.signup-form {
+  width: 350px;
+  height: 570px;
+  border-radius: 4px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.login-form  {
+  height: 500px;
+  width: 300px;
+  border-radius: 4px;
+  margin-top: 50px;
+}
+
+.signup-label-container, .login-label-container {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 20px;
+}
+
+.signup, .login {
+  margin-bottom: 30px;
+  width: 70%;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+.logo{
+height: 30px;
+width: 30px;
+}
+
+}
+
+ @media  (min-width : 768px) and (max-width : 1024px) {
+
+  .vector-container {
+    width: 40%;
+  }
+
+
+} 

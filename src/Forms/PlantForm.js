@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-/* import { plants } from 'Reducers/plants' */
 import { useDispatch } from 'react-redux'
 import { addPlants } from "../Reducers/plants";
 import { useHistory } from 'react-router-dom';
@@ -35,7 +34,6 @@ export const PlantForm = () => {
     dispatch(addPlants(formData)) //sending form data to the reducer
     clearForm()
     history.push("/plant-list");
-    /*    dispatch(actions.addPlant(true)) */
   }
 
 
@@ -54,16 +52,14 @@ export const PlantForm = () => {
               value={formData.name}
               type="text"
               required
-              onChange={event => setFormData({ ...formData, name: event.target.value })}
-             /*  value={name} */ />
+              onChange={event => setFormData({ ...formData, name: event.target.value })} />
           </label>
 
           <h2>Where is your plant located?</h2>
           <select
             value={formData.location}
             className="dropdown"
-            onChange={event => setFormData({ ...formData, location: event.target.value })}
-           /*  value={location} */>
+            onChange={event => setFormData({ ...formData, location: event.target.value })}>
             <option value="Locations">Locations</option>
             <option value="Kitchen"> Kitchen</option>
             <option value="Living room">Living room</option>
@@ -102,7 +98,6 @@ export const PlantForm = () => {
           <label>
             <h2 className="plant-image">Upload an image of your plant:</h2>
             <input
-              /* value={formData.image} */
               type="file"
               onChange={event => setFormData({
                 ...formData,
@@ -112,7 +107,7 @@ export const PlantForm = () => {
           </label>
 
           <label>
-            <h2 className="plant-date">When do you water this plant?</h2>
+            <h2 className="plant-date">When is the next watering?</h2>
             <input
               value={formData.waterAt}
               type="date"
@@ -124,6 +119,7 @@ export const PlantForm = () => {
         </div>
       </form>
     </>
+
   )
 }
 

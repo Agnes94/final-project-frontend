@@ -32,7 +32,7 @@ export const SignUp = () => {
           <div className="signup-label-container">
             <label>
               <b>Name:</b>
-              <input className="signup" value={name} type="text" placeholder="" required onChange={event => setName(event.target.value)} />
+              <input className="signup-text" value={name} type="text" placeholder="Name" required onChange={event => setName(event.target.value)} />
             </label>
             <label>
               <b>Email:</b>

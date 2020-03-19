@@ -5,9 +5,26 @@
   margin: 20px;
   font-size: 15px;
   padding: 15px;
-  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 100px;
   align-items: center;
-  width: auto;
+  width: 350px;
+  height: auto;
+}
+
+.upload-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #ffff;
+}
+
+.image-container {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .plant-card h2 {
@@ -16,6 +33,13 @@
 
 .plant-card span {
   color: #cfcfc4;
+  font-weight: lighter;
+}
+
+.plantcard-values {
+  border-top: 2px solid #fff ;
+  padding-top: 10px;
+  word-wrap: break-word;
 }
 
 .delete-icon {
@@ -29,3 +53,4 @@
 .delete-icon:hover {
   opacity: 0.8;
 }
+

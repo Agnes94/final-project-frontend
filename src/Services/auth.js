@@ -1,7 +1,7 @@
 //*** Authorization ***/
 
 export const checkAuth = accessToken => {
-  fetch("http://localhost:8000/secrets", {
+  fetch("https://plantcare-webapp.herokuapp.com/secrets", {
     method: "GET",
     headers: { Authorization: accessToken }
   }).then(res => {
@@ -15,7 +15,7 @@ export const checkAuth = accessToken => {
 //*** Sign Up ***//
 
 export const signUp = (name, email, password) => {
-  return fetch("http://localhost:8000/users", {
+  return fetch("https://plantcare-webapp.herokuapp.com/users", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -44,7 +44,7 @@ export const signUp = (name, email, password) => {
 //*** Login ***//
 
 export const loginUser = (email, password) => {
-  return fetch("http://localhost:8000/login", {
+  return fetch("https://plantcare-webapp.herokuapp.com/login", {
     method: "POST",
     headers: {
       Accept: "application/json",

@@ -1,7 +1,6 @@
 import React from 'react'
 import 'Styling/hamburgerMenu.css'
 import { Link } from "react-router-dom"
-/* import { HamburgerMenu } from 'react-hamburger-menu'; */
 
 export const HamburgerMenu = () => {
   return (
@@ -16,8 +15,8 @@ export const HamburgerMenu = () => {
       <ul className="mobile-menu">
         <li><Link to="/home-page">Home</Link></li>
         <li><Link to="/about">About</Link></li>
-        <li><Link to="/articles">Articles</Link></li>
-        <li><Link to="/plants">My Plants</Link></li>
+        <li><Link to="/plant-list">My plants</Link></li>
+        <li><Link to="/plants">Add plants</Link></li>
         <li><Link to="/login">Log Out</Link></li>
       </ul>
     </div>

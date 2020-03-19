@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   height: auto;
-  display:none;
+  margin-top: 20px;
 }
 
 .navigation a {
@@ -24,12 +24,14 @@
 
 .mobile-menu li {
   text-decoration: none;
-  padding: 0 10px 10px 10px;
+  padding: 5px;
+  margin-right: 10px;
+  margin-left: 0;
   list-style: none;
 }
 
 .mobile-menu {
-  margin: 10px auto auto 55px;
+  margin: 10px auto auto 40px;
   opacity: 0;
   display: none;
   display: flex;
@@ -68,3 +70,12 @@ label {
   margin-top: 10px;
   cursor: pointer;
 }
+
+
+ @media  (min-width : 768px) and (max-width : 1024px) {
+
+  .hamburger-menu {
+    display: none;
+  }
+
+ }

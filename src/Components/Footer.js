@@ -8,6 +8,7 @@ export const Footer = () => {
         <p>&copy; Agnes Ketesdi</p>
         <p>agnes.ketesdi@gmail.com</p>
         <p>+46765628714</p>
+        <p>Vectors by Freepik</p>
       </div>
     </footer>
   )

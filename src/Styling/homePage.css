@@ -1,6 +1,6 @@
 .home-page {
   display: flex;
-flex-direction: row;
+  flex-direction: row;
 }
 
 .home-vector {
@@ -8,6 +8,7 @@ flex-direction: row;
   height: 650px;
   padding-top: 70px;
   padding-right: 30px;
+  margin-bottom: 60px;
 }
 
 .home-text {
@@ -23,17 +24,82 @@ flex-direction: row;
   width: 250px;
   height: 70px;
   font-size: 30px;
+  margin-bottom: 50px;
   background-color: #DF524E;
 }
 
 .home-text h1 {
-padding-top: 30px;
-margin-bottom: 50px;
-font-size: 60px;
+  margin-bottom: 20px;
+  font-size: 60px;
 }
 
 .home-text h2 {
   font-size: 30px;
   font-weight: lighter;
   letter-spacing: 1px;
+}
+
+@media (min-width : 320px) and (max-width: 767px) {
+
+.home-page {
+  flex-direction: column;
+  align-content: center;
+}
+
+.home-vector {
+ display: none;
+}
+
+.home-btn {
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  background-color: #DF524E;
+}
+
+.home-text {
+  margin: 0;
+}
+
+.home-text h1 {
+  padding-top: 30px;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.home-text h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  letter-spacing: 0;
+}
+
+.navbar {
+  display: none;
+}
+
+}
+
+ @media  (min-width : 768px) {
+
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .home-text{
+    margin: 0;
+  }
+
+  .home-text h2 {
+    font-size: 40px;
+  }
+
+  .home-text h1 {
+    font-size: 60px;
+  }
+
+  .hamburger-menu{
+    display: none;
+  }
+
 }

@@ -44,7 +44,7 @@ export const addPlants = (plant) => {
     data.append("waterAt", plant.waterAt)
     data.append("image", plant.image)
     return dispatch => {
-        fetch("http://127.0.0.1:8000/plants", {
+        fetch("https://plantcare-webapp.herokuapp.com/plants", {
             method: 'POST',
             body: data,
             headers: {
@@ -58,29 +58,12 @@ export const addPlants = (plant) => {
     }
 }
 
-/* export const addPlants = (plant) => {
-    return dispatch => {
-        fetch("http://127.0.0.1:8000/plants", {
-            method: 'POST',
-            body: `name=${plant.name}&location=${plant.location}&type=${plant.type}&notes=${plant.notes}&acquiredAt=${plant.acquiredAt}&waterAt=${plant.waterAt}`,
-            headers: {
-                Accept: "application/json",
-                'Content-Type': "application/x-www-form-urlencoded"
-            }
-        })
-            .then(res => res.json())
-            .then((json) => {
-                dispatch(plants.actions.addPlant(json))
-            })
-    }
-}
- */
 //THUNK FOR PLANT LIST
 
 export const PlantFetch = () => {
     return dispatch => {
         const accessToken = localStorage.getItem('accessToken')
-        fetch(`http://127.0.0.1:8000/plants/`, {
+        fetch(`https://plantcare-webapp.herokuapp.com/plants/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -95,9 +78,10 @@ export const PlantFetch = () => {
 }
 
 //THUNK FOR EDITING SPECIFIC PLANT
+
 export const editPlants = (formData, plantId) => {
     return dispatch => {
-        fetch(`http://127.0.0.1:8000/plants/${plantId}`, {
+        fetch(`https://plantcare-webapp.herokuapp.com/${plantId}`, {
             method: 'PUT',
             body: JSON.stringify(formData),
             headers: { 'Content-Type': 'application/json' }
@@ -110,9 +94,10 @@ export const editPlants = (formData, plantId) => {
 }
 
 //THUNK FOR DELETING SPECIFIC PLANT
+
 export const deletePlants = (plantId) => {
     return dispatch => {
-        fetch(`http://127.0.0.1:8000/plants/${plantId}`, {
+        fetch(`https://plantcare-webapp.herokuapp.com/plants/${plantId}`, {
             method: 'DELETE',
         })
             .then(() => {

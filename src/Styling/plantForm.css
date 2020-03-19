@@ -1,7 +1,7 @@
 .form-style {
-  width: 93%;
+  width: 80%;
   margin: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   margin-top: 80px;
   border: 2px solid;
   border-radius: 12px;
@@ -10,6 +10,14 @@
 
 .form-style h2 {
   margin: 20px;
+}
+
+.plants-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-right: 100px;
+  margin-left: 100px;
 }
 
 .form-title {
@@ -111,3 +119,42 @@ select {
 select:hover {
   background-color: #cfcfc4;
 }
+
+
+@media (min-width : 320px) and (max-width: 467px) {
+
+.form-style {
+  width: 140%;
+  margin: 0;
+  margin-bottom: 100px;
+  margin-top: 80px;
+  margin-left: 50px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+input[type=file] {
+  width: 200px;
+}
+
+input[type=text] {
+  width: 80%;
+}
+
+input[type=date] {
+  width: 80%;
+}
+
+input[type=file] {
+ width: 80%;
+}
+
+select {
+  width: 85%;
+}
+
+}
+
