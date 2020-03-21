@@ -1,19 +1,35 @@
-# Technigo React Starter App
+# Final project @ Technigo Bootcamp 2020 (frontend)
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+My final project at Technigo Bootcamp wraps up all the technologies that I've learned in the last 6 months of the bootcamp. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+I've created a multi-page react plant care managment web-app. After signing up and logging in, the user can create a profile for their plants, with all the information needed for an easier plant care, for example next watering date, location, etc. It also allows the user to upload an image of the plant and delete a plant card. As a stretch goal I opted for sending email notification to the user, but because lack-of time I dropped the idea, saving it for the future.
 
-## Usage
+Live site: https://plantcare-finalproject.netlify.com
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Learning objectives
 
-Alternatively, if you don't want a new git repo on your account;
+* Structuring and planning a bigger, fullstack project
+* Building both frontend and backend side
+* Combining several technologies
+* Creating a design from scratch 
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Technologies used
+
+Frontend:
+* JavaScript ES6 <br>
+* React <br>
+* React Hooks<br>
+* React Router<br>
+* Redux<br>
+* CSS3 <br>
+* Styled components <br>
+* API <br>
+
+Backend:
+* Express <br>
+* MongoDB <br>
+* Mongoose <br>
+* Mongo Atlas <br>
+
+## Credits
+Vectors from Freepik
